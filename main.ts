@@ -1,14 +1,18 @@
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType.down, function () {
     radio.sendValue("emote", 2)
+    basic.showIcon(IconNames.Angry)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.down, function () {
     radio.sendValue("emote", 3)
+    basic.showIcon(IconNames.Asleep)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P13, joystickbit.ButtonType.down, function () {
     radio.sendValue("emote", 1)
+    basic.showIcon(IconNames.Sad)
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
     radio.sendValue("emote", 0)
+    basic.showIcon(IconNames.Heart)
 })
 let y = 0
 let x = 0
