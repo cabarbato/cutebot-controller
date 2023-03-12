@@ -23,6 +23,7 @@ joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType
 })
 let y = 0
 let x = 0
+joystickbit.initJoystickBit()
 basic.showLeds(`
     . . . . .
     . # . # .
@@ -30,13 +31,9 @@ basic.showLeds(`
     # . # . #
     . # . # .
     `)
+joystickbit.Vibration_Motor(100)
 music.playSoundEffect(music.builtinSoundEffect(soundExpression.giggle), SoundExpressionPlayMode.InBackground)
 radio.setGroup(1)
-joystickbit.initJoystickBit()
-joystickbit.Vibration_Motor(100)
-basic.forever(function () {
-	
-})
 basic.forever(function () {
     x = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.X), 1023, 0, -100, 100)
     y = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.Y), 1023, 0, -100, 100)
